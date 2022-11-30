@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+    text-decoration: none; 
+    text-transform: none; 
+    font-family: Arial, Helvetica, sans-serif; 
+}
+body{
+    background-color: antiquewhite;
+}
+nav.navbar{
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;    
+    
+}
+.menulist ul{
+    padding-right: 10px;
+}
+
+.menulist ul li{
+    list-style: none;
+    display: inline-block;
+}
+.menulist ul li a{
+    color: #fff;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+.menulist ul li a:hover{
+    border: 1px solid #fff;
+    background-color: #000;
+}
+
+.navbar .logo{
+    font-size: 1.3rem;
+    padding-left: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.toggle-icon{
+    background-color: #000;
+    padding: 10px 10px 7px 10px;
+    border-radius: 4px;
+    margin-right: 20px;
+    display: none;
+}
+.toggle-icon .icon-bar{
+    width: 27px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 3px;
+    display: block;
+}
+.toggle-icon:hover{
+    background-color: #222;
+}
+
+section{
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+    line-height: 2rem;
+}
+
+@media (max-width:800px) {
+    .navbar{
+        width: 100%;
+        position: relative;
+    }
+    .toggle-icon{
+        display: block;
+    }
+    .menulist{
+        /* display: none; */
+        position: absolute;
+        top: 100%;
+        background-color: rgba(0, 0, 0, 0.785);
+        width: 100%;
+        transition: height 0.5s;
+        height: 0;
+        overflow: hidden;
+    }
+    .menulist.active{
+        /* display: block; */        
+        height: 265px;
+    }
+    .menulist ul{
+        width: 100%;
+        padding-right: 0;
+        border-top: 1px solid #414141;
+    }
+    .menulist ul li{
+        display: block;
+        padding: 10px;
+        border: 1px solid #fff;
+        margin: 20px;
+        border-radius: 4px;
+        background-color: #000;
+    }
+}
